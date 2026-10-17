@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Haz tu Pedido | Panadería y Pastelería William - Cajamarca</title>
+  <meta name="description" content="Arma tu lista de panes y dulces artesanales y envíala directamente por WhatsApp para coordinar recojo o delivery en Cajamarca.">
+  <link rel="icon" href="../img/logo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,800&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <!-- Barra Superior -->
+  <aside class="top-bar" aria-label="Aviso y contacto">
+    <div class="top-bar-left">
+      <span class="top-badge">Horno en marcha</span>
+      <span>🥖 Pan caliente: <b class="hot-bread-am">6:30 AM</b> y <b class="hot-bread-pm">4:45 PM</b></span>
+      <span>📍 <span class="address-display">Jr. Chanchamayo 1874, Urb. El Amauta, Cajamarca</span></span>
+    </div>
+    <div class="top-bar-right">
+      <span>Pedidos al WhatsApp: <b class="phone-display">+51 976 123 456</b></span>
+    </div>
+  </aside>
+
+  <!-- Encabezado Principal con Navegación -->
+  <header>
+    <a class="brand" href="../index.html">
+      <img src="../img/logo.jpg" alt="Logo de Panadería y Pastelería William">
+      <div class="brand-text">
+        <b>Panadería y Pastelería William</b>
+        <small>Calidad que conserva nuestra tradición · Desde 2000</small>
+      </div>
+    </a>
+
+    <!-- Navegación de Escritorio -->
+    <nav class="main-nav" aria-label="Menú principal">
+      <a href="../index.html">Inicio</a>
+      <a href="productos.html">Productos y Precios</a>
+      <a href="novedades.html">Novedades</a>
+      <a href="historia.html">Nuestra Historia</a>
+      <a href="pedidos.html" class="active">Haz tu Pedido</a>
+      <a href="pagos.html">Métodos de Pago</a>
+      <a href="contacto.html">Contáctanos</a>
+    </nav>
+
+    <!-- Acciones de Encabezado -->
+    <div class="header-actions">
+      <a href="pedidos.html" class="cart-btn" aria-label="Ver lista de pedidos">
+        <span>🛒 Mi Pedido</span>
+        <span class="cart-badge" style="display:none">0</span>
+      </a>
+      <button id="burger" class="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="drawer">
+        <i></i><i></i><i></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Menú Lateral Móvil (Drawer) -->
+  <div id="scrim"></div>
+  <aside id="drawer" aria-hidden="true" aria-label="Menú de navegación para móviles">
+    <div class="drawer-header">
+      <span class="drawer-title">Menú Principal</span>
+      <span style="font-size:0.85rem; color:var(--oro)">Cajamarca</span>
+    </div>
+    <nav>
+      <a href="../index.html"><span>🏠 Inicio</span> <span>→</span></a>
+      <a href="productos.html"><span>🥖 Productos y Precios</span> <span>→</span></a>
+      <a href="novedades.html"><span>✨ Novedades y Temporadas</span> <span>→</span></a>
+      <a href="historia.html"><span>🌾 Nuestra Historia</span> <span>→</span></a>
+      <a href="pedidos.html" class="active"><span>📝 Haz tu Pedido</span> <span>→</span></a>
+      <a href="pagos.html"><span>💳 Métodos de Pago</span> <span>→</span></a>
+      <a href="contacto.html"><span>📍 Contáctanos</span> <span>→</span></a>
+    </nav>
+    <div class="drawer-info">
+      <b>Panadería y Pastelería William</b>
+      <p>Jr. Chanchamayo 1874, Urb. El Amauta, Cajamarca</p>
+      <p style="margin-top:6px">WhatsApp: <b class="phone-display">+51 976 123 456</b></p>
+    </div>
+  </aside>
+
+  <!-- Contenido de Pedidos -->
+  <main>
+    <section class="page-header">
+      <div class="breadcrumbs">
+        <a href="../index.html">Inicio</a> <span>/</span> <b>Haz tu Pedido</b>
+      </div>
+      <h1>Generador de Pedidos por WhatsApp</h1>
+      <p>Arma tu lista de panes y dulces, ingresa tus preferencias de recojo o delivery y envía el resumen directamente a nuestro WhatsApp oficial.</p>
+    </section>
+
+    <section class="section">
+      <div class="order-workspace">
+        
+        <!-- Columna Izquierda: Formulario de Datos y Añadido Rápido -->
+        <div class="order-card" id="order-form">
+          <h3>1. Datos de Entrega y Cliente</h3>
+          
+          <div class="form-group">
+            <label for="order-name">Tu Nombre y Apellido (opcional)</label>
+            <input type="text" id="order-name" placeholder="Ej. Juan Pérez" autocomplete="name">
+          </div>
+
+          <div class="form-group">
+            <label for="order-phone">Teléfono de contacto</label>
+            <input type="tel" id="order-phone" placeholder="Ej. 976 123 456" autocomplete="tel">
+          </div>
+
+          <div class="form-group">
+            <label>Modalidad de entrega</label>
+            <div class="delivery-options">
+              <label class="delivery-radio">
+                <input type="radio" name="delivery-type" value="recojo" checked>
+                <span>🏪 Recojo en Tienda<br><small style="color:var(--ink-muted);font-weight:normal">Jr. Chanchamayo 1874</small></span>
+              </label>
+              <label class="delivery-radio">
+                <input type="radio" name="delivery-type" value="delivery">
+                <span>🛵 Envío por Delivery<br><small style="color:var(--ink-muted);font-weight:normal">A domicilio en Cajamarca</small></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group" id="delivery-address-group" style="display:none;">
+            <label for="order-address">Dirección exacta en Cajamarca (calle, número y referencia)</label>
+            <input type="text" id="order-address" placeholder="Ej. Jr. Amalia Puga 450, frente al parque">
+          </div>
+
+          <div class="form-group">
+            <label for="order-time">Fecha y hora preferida</label>
+            <input type="text" id="order-time" placeholder="Ej. Hoy para el pan caliente de las 4:45 PM o Mañana 7:00 AM">
+          </div>
+
+          <div class="form-group">
+            <label for="order-notes">Observaciones adicionales</label>
+            <textarea id="order-notes" rows="2" placeholder="Detalles de sabor de tortas, rebanado de pan, dedicatoria, etc."></textarea>
+          </div>
+
+          <hr style="border:none; border-top:1px dashed var(--border); margin:28px 0 20px;">
+
+          <h3>Añadir más productos a la lista</h3>
+          <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:flex-end;">
+            <div style="flex:2; min-width:180px;">
+              <label for="quick-prod-select" style="font-size:0.85rem; font-weight:700; color:var(--cacao); display:block; margin-bottom:4px;">Seleccionar Producto</label>
+              <select id="quick-prod-select" style="width:100%; padding:10px; border:1.5px solid var(--border); border-radius:8px; background:#fff;"></select>
+            </div>
+            <div style="width:75px;">
+              <label for="quick-prod-qty" style="font-size:0.85rem; font-weight:700; color:var(--cacao); display:block; margin-bottom:4px;">Cant.</label>
+              <input type="number" id="quick-prod-qty" value="1" min="1" max="99" style="width:100%; padding:10px; border:1.5px solid var(--border); border-radius:8px; text-align:center;">
+            </div>
+            <button type="button" class="btn small" id="btn-quick-add" style="margin-bottom:2px;">+ Añadir</button>
+          </div>
+          <p style="font-size:0.82rem; color:var(--ink-muted); margin-top:10px;">También puedes explorar con fotos en la página de <a href="productos.html" style="color:var(--oro); font-weight:700; text-decoration:underline;">Productos y Precios</a>.</p>
+        </div>
+
+        <!-- Columna Derecha: Lista Interactiva y Ticket de WhatsApp -->
+        <div class="order-card">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+            <h3>2. Resumen del Pedido</h3>
+            <button type="button" id="btn-clear-cart" style="background:none; border:none; color:#a0402a; font-weight:700; font-size:0.85rem; cursor:pointer; text-decoration:underline;">Vaciar lista</button>
+          </div>
+
+          <ul class="order-items-list" id="order-items-list">
+            <!-- Renderizado dinámico desde app.js -->
+          </ul>
+
+          <div id="order-summary-box">
+            <div class="order-total-bar">
+              <span>Total Estimado:</span>
+              <span id="order-total-price">S/ 0.00</span>
+            </div>
+
+            <!-- Vista previa del Ticket formateado para WhatsApp -->
+            <div class="ticket-box">
+              <div class="ticket-header">
+                <b>Mensaje para WhatsApp</b>
+                <span style="font-size:0.82rem; color:var(--ink-muted);">Se enviará este formato a la panadería</span>
+              </div>
+              <pre class="ticket-preview" id="order-wa-preview"></pre>
+              
+              <div class="order-actions">
+                <button type="button" class="btn wa" id="btn-send-wa" style="width:100%; font-size:1.05rem;">
+                  <span>📲 Enviar Pedido por WhatsApp</span>
+                </button>
+                <button type="button" class="btn ghost" id="btn-copy-summary" style="width:100%;">
+                  <span>📋 Copiar resumen al portapapeles</span>
+                </button>
+              </div>
+            </div>
+
+            <p style="font-size:0.82rem; text-align:center; color:var(--ink-muted); margin-top:14px;">
+              🔒 Los métodos de pago (Yape, Plin o Efectivo) y los detalles de entrega se confirman por WhatsApp.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Preguntas Frecuentes sobre Pedidos -->
+      <div style="margin-top:70px; max-width:860px; margin-left:auto; margin-right:auto;">
+        <div class="section-head">
+          <h2>Preguntas Frecuentes sobre los Pedidos</h2>
+          <p>Todo lo que necesitas saber para recibir tu pan fresco sin complicaciones.</p>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:16px;">
+          <div style="background:#fff; padding:22px; border-radius:14px; border:1px solid var(--border); box-shadow:var(--shadow-sm);">
+            <b style="font-size:1.1rem; color:var(--cacao); display:block; margin-bottom:6px;">¿Con cuánto tiempo de anticipación debo hacer mi pedido?</b>
+            <p>Para panes del día y rosquitas, puedes pedir con 30 minutos a 1 hora de anticipación. Para tortas de cumpleaños decoradas y pedidos especiales por mayor, recomendamos 24 a 48 horas de antelación.</p>
+          </div>
+          <div style="background:#fff; padding:22px; border-radius:14px; border:1px solid var(--border); box-shadow:var(--shadow-sm);">
+            <b style="font-size:1.1rem; color:var(--cacao); display:block; margin-bottom:6px;">¿Hacen delivery a todo Cajamarca?</b>
+            <p>Sí, coordinamos envíos por motorizado local a los distintos barrios y urbanizaciones de Cajamarca. El costo de envío se cotiza según tu zona exacta.</p>
+          </div>
+          <div style="background:#fff; padding:22px; border-radius:14px; border:1px solid var(--border); box-shadow:var(--shadow-sm);">
+            <b style="font-size:1.1rem; color:var(--cacao); display:block; margin-bottom:6px;">¿Cómo puedo pagar mi pedido?</b>
+            <p>Aceptamos Yape, Plin, transferencia bancaria (BCP) y efectivo contra entrega en el local. Consulta más detalles en nuestra página de <a href="pagos.html" style="color:var(--oro); font-weight:700; text-decoration:underline;">Métodos de Pago</a>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Píldora Flotante del Carrito -->
+  <a href="pedidos.html" class="floating-cart-pill" id="floating-cart" aria-label="Ver pedido en curso">
+    <span>🛒</span>
+    <span class="floating-cart-txt"><b>0</b> productos</span>
+    <span>→</span>
+  </a>
+
+  <!-- Pie de Página -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="../img/logo.jpg" alt="Panadería y Pastelería William">
+        <b>Panadería y Pastelería William</b>
+        <p>Calidad que conserva nuestra tradición. Horneando para las familias de Cajamarca desde el año 2000 con dedicación artesanal.</p>
+        <p style="font-size:0.9rem; color:var(--oro-light);">📍 Jr. Chanchamayo N.° 1874, Urb. El Amauta, Cajamarca, Perú</p>
+      </div>
+      <div class="footer-col">
+        <h4>Páginas del Sitio</h4>
+        <ul class="footer-links">
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos y Precios</a></li>
+          <li><a href="novedades.html">Novedades y Temporadas</a></li>
+          <li><a href="historia.html">Nuestra Historia</a></li>
+          <li><a href="pedidos.html">Haz tu Pedido</a></li>
+          <li><a href="pagos.html">Métodos de Pago</a></li>
+          <li><a href="contacto.html">Contáctanos</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Horarios y Contacto</h4>
+        <p><b>Lunes a Sábado:</b><br>6:00 AM - 9:30 PM</p>
+        <p style="margin-top:8px"><b>Domingos:</b><br>6:30 AM - 9:00 PM</p>
+        <p style="margin-top:12px"><b>WhatsApp:</b><br><span class="phone-display">+51 976 123 456</span></p>
+        <div style="margin-top:16px;">
+          <a href="pedidos.html" class="btn small wa">Pedir por WhatsApp</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2000 - 2026 Panadería y Pastelería William. Todos los derechos reservados.</p>
+      <p>Cajamarca, Perú · Elaborado con masa madre, tradición y cariño artesanal.</p>
+    </div>
+  </footer>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>

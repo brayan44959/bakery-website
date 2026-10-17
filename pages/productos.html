@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Productos y Precios | Panadería y Pastelería William - Cajamarca</title>
+  <meta name="description" content="Catálogo completo de panes artesanales, rosquitas cajamarquinas, pasteles, bizcochos y bocaditos. Consulta precios y haz tu pedido online.">
+  <link rel="icon" href="../img/logo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,800&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <!-- Barra Superior -->
+  <aside class="top-bar" aria-label="Aviso y contacto">
+    <div class="top-bar-left">
+      <span class="top-badge">Horno en marcha</span>
+      <span>🥖 Pan caliente: <b class="hot-bread-am">6:30 AM</b> y <b class="hot-bread-pm">4:45 PM</b></span>
+      <span>📍 <span class="address-display">Jr. Chanchamayo 1874, Urb. El Amauta, Cajamarca</span></span>
+    </div>
+    <div class="top-bar-right">
+      <span>Pedidos al WhatsApp: <b class="phone-display">+51 976 123 456</b></span>
+    </div>
+  </aside>
+
+  <!-- Encabezado Principal con Navegación -->
+  <header>
+    <a class="brand" href="../index.html">
+      <img src="../img/logo.jpg" alt="Logo de Panadería y Pastelería William">
+      <div class="brand-text">
+        <b>Panadería y Pastelería William</b>
+        <small>Calidad que conserva nuestra tradición · Desde 2000</small>
+      </div>
+    </a>
+
+    <!-- Navegación de Escritorio -->
+    <nav class="main-nav" aria-label="Menú principal">
+      <a href="../index.html">Inicio</a>
+      <a href="productos.html" class="active">Productos y Precios</a>
+      <a href="novedades.html">Novedades</a>
+      <a href="historia.html">Nuestra Historia</a>
+      <a href="pedidos.html">Haz tu Pedido</a>
+      <a href="pagos.html">Métodos de Pago</a>
+      <a href="contacto.html">Contáctanos</a>
+    </nav>
+
+    <!-- Acciones de Encabezado -->
+    <div class="header-actions">
+      <a href="pedidos.html" class="cart-btn" aria-label="Ver lista de pedidos">
+        <span>🛒 Mi Pedido</span>
+        <span class="cart-badge" style="display:none">0</span>
+      </a>
+      <button id="burger" class="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="drawer">
+        <i></i><i></i><i></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Menú Lateral Móvil (Drawer) -->
+  <div id="scrim"></div>
+  <aside id="drawer" aria-hidden="true" aria-label="Menú de navegación para móviles">
+    <div class="drawer-header">
+      <span class="drawer-title">Menú Principal</span>
+      <span style="font-size:0.85rem; color:var(--oro)">Cajamarca</span>
+    </div>
+    <nav>
+      <a href="../index.html"><span>🏠 Inicio</span> <span>→</span></a>
+      <a href="productos.html" class="active"><span>🥖 Productos y Precios</span> <span>→</span></a>
+      <a href="novedades.html"><span>✨ Novedades y Temporadas</span> <span>→</span></a>
+      <a href="historia.html"><span>🌾 Nuestra Historia</span> <span>→</span></a>
+      <a href="pedidos.html"><span>📝 Haz tu Pedido</span> <span>→</span></a>
+      <a href="pagos.html"><span>💳 Métodos de Pago</span> <span>→</span></a>
+      <a href="contacto.html"><span>📍 Contáctanos</span> <span>→</span></a>
+    </nav>
+    <div class="drawer-info">
+      <b>Panadería y Pastelería William</b>
+      <p>Jr. Chanchamayo 1874, Urb. El Amauta, Cajamarca</p>
+      <p style="margin-top:6px">WhatsApp: <b class="phone-display">+51 976 123 456</b></p>
+    </div>
+  </aside>
+
+  <!-- Contenido de la Página de Productos -->
+  <main>
+    <section class="page-header">
+      <div class="breadcrumbs">
+        <a href="../index.html">Inicio</a> <span>/</span> <b>Productos y Precios</b>
+      </div>
+      <h1>Nuestros Productos y Precios</h1>
+      <p>Elaborados cada madrugada con recetas tradicionales de Cajamarca. Selecciona tus favoritos y añádelos a tu pedido para coordinar por WhatsApp.</p>
+    </section>
+
+    <section class="section">
+      <!-- Barra de Filtros y Búsqueda -->
+      <div class="filters-bar">
+        <div class="filters" role="group" aria-label="Filtrar por categoría">
+          <button data-f="todos" aria-pressed="true">Todos (13)</button>
+          <button data-f="panes" aria-pressed="false">🥖 Panes Tradicionales</button>
+          <button data-f="dulces" aria-pressed="false">🍩 Dulces & Bizcochos</button>
+          <button data-f="pasteleria" aria-pressed="false">🎂 Pastelería & Tortas</button>
+          <button data-f="especialidades" aria-pressed="false">⭐ Especialidades Cajamarquinas</button>
+        </div>
+        
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="product-search" placeholder="Buscar pan, rosquitas, queque..." aria-label="Buscar producto">
+        </div>
+      </div>
+
+      <!-- Notificación de lista vacía en búsqueda -->
+      <div id="products-empty" style="display:none; text-align:center; padding:50px 20px;">
+        <span style="font-size:3rem">🔍</span>
+        <h3 style="margin:12px 0 6px">No encontramos coincidencias</h3>
+        <p>Intenta con otro término o selecciona una categoría diferente.</p>
+      </div>
+
+      <!-- Grilla Completa del Catálogo -->
+      <div class="catalog-grid" id="products-grid">
+        <!-- Renderizado dinámicamente con imágenes reales por js/app.js -->
+      </div>
+
+      <!-- Banner de Pedidos Especiales -->
+      <div style="background:var(--crema-dark) var(--kraft); border:2px dashed var(--oro); border-radius:18px; padding:36px 30px; margin-top:60px; display:flex; justify-content:space-between; align-items:center; gap:24px; flex-wrap:wrap;">
+        <div>
+          <span style="background:var(--caramelo); color:#fff; padding:3px 10px; border-radius:4px; font-weight:800; font-size:0.75rem; text-transform:uppercase;">Atención a Eventos</span>
+          <h3 style="margin:8px 0 6px;">¿Necesitas pedidos por mayor o bocaditos para eventos?</h3>
+          <p>Preparamos panes para lonches corporativos, colegios, cumpleaños y fiestas en Cajamarca. Coordinación directa con 24 a 48h de anticipación.</p>
+        </div>
+        <a href="pedidos.html" class="btn wa">Consultar Pedido Especial por WhatsApp →</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Píldora Flotante del Carrito -->
+  <a href="pedidos.html" class="floating-cart-pill" id="floating-cart" aria-label="Ver pedido en curso">
+    <span>🛒</span>
+    <span class="floating-cart-txt"><b>0</b> productos</span>
+    <span>→</span>
+  </a>
+
+  <!-- Pie de Página -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="../img/logo.jpg" alt="Panadería y Pastelería William">
+        <b>Panadería y Pastelería William</b>
+        <p>Calidad que conserva nuestra tradición. Horneando para las familias de Cajamarca desde el año 2000 con dedicación artesanal.</p>
+        <p style="font-size:0.9rem; color:var(--oro-light);">📍 Jr. Chanchamayo N.° 1874, Urb. El Amauta, Cajamarca, Perú</p>
+      </div>
+      <div class="footer-col">
+        <h4>Páginas del Sitio</h4>
+        <ul class="footer-links">
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos y Precios</a></li>
+          <li><a href="novedades.html">Novedades y Temporadas</a></li>
+          <li><a href="historia.html">Nuestra Historia</a></li>
+          <li><a href="pedidos.html">Haz tu Pedido</a></li>
+          <li><a href="pagos.html">Métodos de Pago</a></li>
+          <li><a href="contacto.html">Contáctanos</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Horarios y Contacto</h4>
+        <p><b>Lunes a Sábado:</b><br>6:00 AM - 9:30 PM</p>
+        <p style="margin-top:8px"><b>Domingos:</b><br>6:30 AM - 9:00 PM</p>
+        <p style="margin-top:12px"><b>WhatsApp:</b><br><span class="phone-display">+51 976 123 456</span></p>
+        <div style="margin-top:16px;">
+          <a href="pedidos.html" class="btn small wa">Pedir por WhatsApp</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2000 - 2026 Panadería y Pastelería William. Todos los derechos reservados.</p>
+      <p>Cajamarca, Perú · Elaborado con masa madre, tradición y cariño artesanal.</p>
+    </div>
+  </footer>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>

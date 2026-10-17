@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Panadería y Pastelería William | Desde 2000 en Cajamarca</title>
+  <meta name="description" content="Panadería y pastelería tradicional en Cajamarca desde el año 2000. Pan de agua crocante, rosquitas cajamarquinas, pan de yema, pasteles y pedidos por WhatsApp.">
+  <link rel="icon" href="img/logo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,800&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Barra Superior -->
+  <aside class="top-bar" aria-label="Aviso y contacto">
+    <div class="top-bar-left">
+      <span class="top-badge">Horno en marcha</span>
+      <span>🥖 Pan caliente: <b class="hot-bread-am">6:30 AM</b> y <b class="hot-bread-pm">4:45 PM</b></span>
+      <span>📍 <span class="address-display">Jr. Chanchamayo 1874, Urb. El Amauta, Cajamarca</span></span>
+    </div>
+    <div class="top-bar-right">
+      <span>Pedidos al WhatsApp: <b class="phone-display">+51 976 123 456</b></span>
+    </div>
+  </aside>
+
+  <!-- Encabezado Principal con Navegación -->
+  <header>
+    <a class="brand" href="index.html">
+      <img src="img/logo.jpg" alt="Logo de Panadería y Pastelería William">
+      <div class="brand-text">
+        <b>Panadería y Pastelería William</b>
+        <small>Calidad que conserva nuestra tradición · Desde 2000</small>
+      </div>
+    </a>
+
+    <!-- Navegación de Escritorio -->
+    <nav class="main-nav" aria-label="Menú principal">
+      <a href="index.html" class="active">Inicio</a>
+      <a href="pages/productos.html">Productos y Precios</a>
+      <a href="pages/novedades.html">Novedades</a>
+      <a href="pages/historia.html">Nuestra Historia</a>
+      <a href="pages/pedidos.html">Haz tu Pedido</a>
+      <a href="pages/pagos.html">Métodos de Pago</a>
+      <a href="pages/contacto.html">Contáctanos</a>
+    </nav>
+
+    <!-- Acciones de Encabezado -->
+    <div class="header-actions">
+      <a href="pages/pedidos.html" class="cart-btn" aria-label="Ver lista de pedidos">
+        <span>🛒 Mi Pedido</span>
+        <span class="cart-badge" style="display:none">0</span>
+      </a>
+      <button id="burger" class="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="drawer">
+        <i></i><i></i><i></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Menú Lateral Móvil (Drawer) -->
+  <div id="scrim"></div>
+  <aside id="drawer" aria-hidden="true" aria-label="Menú de navegación para móviles">
+    <div class="drawer-header">
+      <span class="drawer-title">Menú Principal</span>
+      <span style="font-size:0.85rem; color:var(--oro)">Cajamarca</span>
+    </div>
+    <nav>
+      <a href="index.html" class="active"><span>🏠 Inicio</span> <span>→</span></a>
+      <a href="pages/productos.html"><span>🥖 Productos y Precios</span> <span>→</span></a>
+      <a href="pages/novedades.html"><span>✨ Novedades y Temporadas</span> <span>→</span></a>
+      <a href="pages/historia.html"><span>🌾 Nuestra Historia</span> <span>→</span></a>
+      <a href="pages/pedidos.html"><span>📝 Haz tu Pedido</span> <span>→</span></a>
+      <a href="pages/pagos.html"><span>💳 Métodos de Pago</span> <span>→</span></a>
+      <a href="pages/contacto.html"><span>📍 Contáctanos</span> <span>→</span></a>
+    </nav>
+    <div class="drawer-info">
+      <b>Panadería y Pastelería William</b>
+      <p>Jr. Chanchamayo 1874, Urb. El Amauta, Cajamarca</p>
+      <p style="margin-top:6px">WhatsApp: <b class="phone-display">+51 976 123 456</b></p>
+    </div>
+  </aside>
+
+  <!-- Contenido Principal -->
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="hero-content">
+        <span class="hero-tag">🌾 24 años de tradición panadera en Cajamarca</span>
+        <h1>El auténtico sabor de nuestra tradición</h1>
+        <p class="hero-desc">Desde el año 2000, horneamos panes de verdad, dulces caseros y pasteles de celebración con ingredientes nobles, paciencia y ese toque familiar que distingue a las mesas cajamarquinas.</p>
+        <div class="hero-actions">
+          <a class="btn" href="pages/productos.html">Ver Catálogo de Productos</a>
+          <a class="btn ghost" href="pages/pedidos.html">Armar mi Pedido</a>
+        </div>
+        <div class="hero-trust">
+          <div class="trust-item"><span>🍞</span> 100% Fresco del Día</div>
+          <div class="trust-item"><span>🔥</span> Pan caliente 2 veces al día</div>
+          <div class="trust-item"><span>🧈</span> Recetas familiares originales</div>
+        </div>
+      </div>
+      <div class="hero-media">
+        <div class="hero-img-wrap">
+          <img src="img/hero.jpg" alt="Canasta de panes artesanales recién horneados">
+        </div>
+        <div class="hero-floating-card">
+          <span style="font-size:2rem">🥖</span>
+          <div>
+            <b>Pan recién horneado</b>
+            <small>Salida diaria: 6:30 AM y 4:45 PM</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTOS DESTACADOS -->
+    <section class="section">
+      <div class="section-head">
+        <h2>Los Favoritos de Cajamarca</h2>
+        <p>Nuestras especialidades más queridas, preparadas cada madrugada para llevar aroma y calor a tu hogar.</p>
+      </div>
+      <div class="catalog-grid" id="featured-products-grid">
+        <!-- Renderizado dinámico desde app.js -->
+      </div>
+      <div style="text-align:center; margin-top:40px;">
+        <a href="pages/productos.html" class="btn">Explorar todo el catálogo completo (13 productos) →</a>
+      </div>
+    </section>
+
+    <!-- COMBOS Y PROMOCIONES -->
+    <section class="section alt-bg">
+      <div class="section-head">
+        <h2>Promociones y Combos Especiales</h2>
+        <p>Armados para el desayuno familiar o el lonche de la tarde con el mejor ahorro.</p>
+      </div>
+      <div class="combos-grid">
+        <article class="combo-card">
+          <span class="combo-badge">El más pedido</span>
+          <div>
+            <h3>Desayuno Cajamarquino Familiar</h3>
+            <p>6 Panes de agua crocantes + 4 Panes de yema dorados + 1 Bolsa de Rosquitas Cajamarquinas tradicionales.</p>
+            <span class="combo-saving">Ahorra S/ 1.00 en combo</span>
+          </div>
+          <div style="margin-top:20px; display:flex; justify-content:space-between; align-items:center;">
+            <b style="font-size:1.4rem; color:var(--tostado)">S/ 9.50</b>
+            <a href="pages/pedidos.html" class="btn small">Pedir este combo</a>
+          </div>
+        </article>
+
+        <article class="combo-card">
+          <span class="combo-badge">Para compartir</span>
+          <div>
+            <h3>Lonche Dulce de la Tarde</h3>
+            <p>4 Bizcochos hojaldrados con canela + 2 Donas artesanales glaseadas + 4 Molletes suaves.</p>
+            <span class="combo-saving">Ideal para 4 a 5 personas</span>
+          </div>
+          <div style="margin-top:20px; display:flex; justify-content:space-between; align-items:center;">
+            <b style="font-size:1.4rem; color:var(--tostado)">S/ 9.80</b>
+            <a href="pages/pedidos.html" class="btn small">Pedir este combo</a>
+          </div>
+        </article>
+
+        <article class="combo-card">
+          <span class="combo-badge">Para llevar de regalo</span>
+          <div>
+            <h3>Pack Tradición de Cajamarca</h3>
+            <p>2 Bolsas de Rosquitas Cajamarquinas de pura manteca + 1 Queque casero entero de William.</p>
+            <span class="combo-saving">El preferido por los viajeros</span>
+          </div>
+          <div style="margin-top:20px; display:flex; justify-content:space-between; align-items:center;">
+            <b style="font-size:1.4rem; color:var(--tostado)">S/ 28.00</b>
+            <a href="pages/pedidos.html" class="btn small">Pedir este combo</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- HISTORIA PREVIEW -->
+    <section class="section">
+      <div class="history-intro">
+        <div class="history-text">
+          <span class="hero-tag">Nuestra Tradición</span>
+          <h2>Más de dos décadas amasando con el corazón</h2>
+          <p>Nuestra historia comenzó en el año 2000 en la Urb. El Amauta de Cajamarca. Con un horno modesto y un gran respeto por el oficio de panadero, nos propusimos conservar el sabor tradicional del pan cajamarquino.</p>
+          <p>Hoy, más de 20 años después, seguimos utilizando ingredientes puros, fermentaciones pacientes y las mismas recetas de familia que nos convirtieron en parte de tu hogar.</p>
+          <div style="margin-top:24px;">
+            <a href="pages/historia.html" class="btn ghost">Conocer toda nuestra historia y taller →</a>
+          </div>
+        </div>
+        <div style="border-radius:18px; overflow:hidden; box-shadow:var(--shadow-md); border:3px solid var(--oro);">
+          <img src="img/historia-taller.jpg" alt="Taller tradicional de Panadería William">
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section class="section alt-bg">
+      <div class="section-head">
+        <h2>Lo que dicen nuestros clientes en Cajamarca</h2>
+        <p>Familias que nos eligen día a día para compartir momentos especiales alrededor de la mesa.</p>
+      </div>
+      <div class="testimonials-grid">
+        <article class="testimonial-card">
+          <div>
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-quote">"El pan de agua recién salido a las 6:30 de la mañana no tiene comparación en todo Cajamarca. Crocante por fuera y suave por dentro. Mis hijos no quieren desayunar otro pan."</p>
+          </div>
+          <div class="testimonial-author">
+            <b>María Elena Rodríguez</b>
+            <small>Barrio San Sebastián, Cajamarca</small>
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <div>
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-quote">"Soy cliente desde el año 2002. La atención familiar de don William y su equipo es de primera. Las rosquitas y el pan de yema mantienen exactamente la misma calidad que hace 20 años."</p>
+          </div>
+          <div class="testimonial-author">
+            <b>Carlos Mendoza Silva</b>
+            <small>Urb. El Amauta, Cajamarca</small>
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <div>
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-quote">"Mandamos a hacer la torta de cumpleaños de mi mamá y todos los invitados quedaron fascinados. Muy fresca, nada empalagosa y la entrega fue súper puntual. 100% recomendados."</p>
+          </div>
+          <div class="testimonial-author">
+            <b>Lucía Terrones</b>
+            <small>Jr. Chanchamayo, Cajamarca</small>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- HORARIOS DEL PAN CALIENTE -->
+    <section class="section">
+      <div style="background:var(--cacao) var(--kraft); color:#fff; border-radius:24px; padding:44px 36px; border:3px solid var(--oro); display:grid; grid-template-columns:1fr 1fr; gap:36px; align-items:center;">
+        <div>
+          <span style="background:var(--caramelo); color:#fff; padding:4px 12px; border-radius:6px; font-weight:800; font-size:0.8rem; text-transform:uppercase;">Punto de Encuentro</span>
+          <h2 style="color:#fff; margin:14px 0 16px;">¿A qué hora sale el pan caliente?</h2>
+          <p style="color:#f2e2cb; margin-bottom:20px;">En Panadería William tenemos dos horarios principales de horneado diario para que siempre encuentres pan crocante y humeante:</p>
+          <div style="display:flex; flex-direction:column; gap:12px;">
+            <div style="background:rgba(255,255,255,0.1); padding:12px 18px; border-radius:10px; border-left:4px solid var(--oro);">
+              <b style="color:var(--oro); font-size:1.1rem;">Mañana: 6:30 AM</b>
+              <span style="display:block; font-size:0.9rem; color:#f0ded0;">Pan de agua, pan de yema, molletes y pan integral para el desayuno.</span>
+            </div>
+            <div style="background:rgba(255,255,255,0.1); padding:12px 18px; border-radius:10px; border-left:4px solid var(--oro);">
+              <b style="color:var(--oro); font-size:1.1rem;">Tarde: 4:45 PM</b>
+              <span style="display:block; font-size:0.9rem; color:#f0ded0;">Bizcochos con canela, cachitos de mantequilla y pan caliente para el lonche.</span>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center;">
+          <h3 style="color:var(--oro-light); margin-bottom:12px;">¿Quieres asegurar tu pedido?</h3>
+          <p style="color:#f2e2cb; margin-bottom:24px;">Escríbenos por WhatsApp y te lo guardamos o lo enviamos a tu domicilio en Cajamarca.</p>
+          <a href="pages/pedidos.html" class="btn wa" style="font-size:1.1rem; padding:15px 30px;">Hacer mi Pedido por WhatsApp →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Píldora Flotante del Carrito -->
+  <a href="pages/pedidos.html" class="floating-cart-pill" id="floating-cart" aria-label="Ver pedido en curso">
+    <span>🛒</span>
+    <span class="floating-cart-txt"><b>0</b> productos</span>
+    <span>→</span>
+  </a>
+
+  <!-- Pie de Página -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="img/logo.jpg" alt="Panadería y Pastelería William">
+        <b>Panadería y Pastelería William</b>
+        <p>Calidad que conserva nuestra tradición. Horneando para las familias de Cajamarca desde el año 2000 con dedicación artesanal.</p>
+        <p style="font-size:0.9rem; color:var(--oro-light);">📍 Jr. Chanchamayo N.° 1874, Urb. El Amauta, Cajamarca, Perú</p>
+      </div>
+      <div class="footer-col">
+        <h4>Páginas del Sitio</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="pages/productos.html">Productos y Precios</a></li>
+          <li><a href="pages/novedades.html">Novedades y Temporadas</a></li>
+          <li><a href="pages/historia.html">Nuestra Historia</a></li>
+          <li><a href="pages/pedidos.html">Haz tu Pedido</a></li>
+          <li><a href="pages/pagos.html">Métodos de Pago</a></li>
+          <li><a href="pages/contacto.html">Contáctanos</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Horarios y Contacto</h4>
+        <p><b>Lunes a Sábado:</b><br>6:00 AM - 9:30 PM</p>
+        <p style="margin-top:8px"><b>Domingos:</b><br>6:30 AM - 9:00 PM</p>
+        <p style="margin-top:12px"><b>WhatsApp:</b><br><span class="phone-display">+51 976 123 456</span></p>
+        <div style="margin-top:16px;">
+          <a href="pages/pedidos.html" class="btn small wa">Pedir por WhatsApp</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2000 - 2026 Panadería y Pastelería William. Todos los derechos reservados.</p>
+      <p>Cajamarca, Perú · Elaborado con masa madre, tradición y cariño artesanal.</p>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
