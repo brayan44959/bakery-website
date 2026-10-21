@@ -44,7 +44,7 @@ const CONFIG = {
 /* ===== CATÁLOGO COMPLETO DE PRODUCTOS =====
    Los panes se venden por paquete:
    - 5 unidades por S/ 1.00 (pan de agua y pan torta)
-   - 4 unidades por S/ 1.00 (pan de yema, integral, bizcochos, cachito con manjar y relleno)
+   - 4 unidades por S/ 1.00 (pan de yema, integral, bizcochos y cachito con manjar)
    - Rosquitas: bolsa de 1/2 kg por S/ 6.00
 */
 const PRODUCTS = [
@@ -140,19 +140,6 @@ const PRODUCTS = [
     destacado: false
   },
   {
-    id: "pan-relleno",
-    name: "Pan relleno de la casa",
-    cats: ["panes"],
-    badge: "Recién horneado",
-    badgeType: "hot",
-    desc: "Panecillo dorado y esponjoso con el relleno casero de la casa, recién salido del horno artesanal. Paquete de 4 panes por S/ 1.00.",
-    details: "Elaborado con nuestra masa madre y un relleno preparado diariamente. Ideal para el desayuno o el lonche, acompañado de una bebida caliente. Se vende en paquete de 4 unidades.",
-    price: 1.00,
-    unit: "paquete de 4 panes",
-    img: "img/productos/pan-relleno.jpg",
-    destacado: false
-  },
-  {
     id: "galletas-avena",
     name: "Galletas rústicas de avena y chispas",
     cats: ["dulces", "especialidades"],
@@ -201,11 +188,11 @@ const COMBOS = [
   {
     id: "combo-lonche",
     name: "Lonche Criollo",
-    desc: "8 bizcochos con canela + 4 panes cachito con manjar + 4 panes rellenos de la casa.",
+    desc: "8 bizcochos con canela + 4 panes cachito con manjar + 4 panes de yema para el lonche.",
     items: [
       { id: "bizcochos", qty: 2 },
       { id: "pan-cachito-manjar", qty: 1 },
-      { id: "pan-relleno", qty: 1 }
+      { id: "pan-de-yema", qty: 1 }
     ],
     price: 3.50,
     note: "Nuevo combo de la tarde",

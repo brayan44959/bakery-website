@@ -30,10 +30,10 @@ Casi todo se administra desde **`js/data.js`**:
 - **`CONFIG`**: teléfono de WhatsApp (formato `51XXXXXXXXX`), dirección, horarios
   (`HORARIO_MANANA` y `HORARIO_TARDE`), números de Yape/Plin/BCP, enlace del mapa y redes sociales.
 - **`PRODUCTS`**: catálogo completo (nombre, precio, unidad, descripción, imagen, destacado).
-  El catálogo actual tiene 10 productos: pan torta, pan de agua, pan de yema, pan integral,
-  bizcochos, pan cachito con manjar, pan relleno, rosquitas, galletas de avena y queque.
+  El catálogo actual tiene 9 productos: pan torta, pan de agua, pan de yema, pan integral,
+  bizcochos, pan cachito con manjar, rosquitas, galletas de avena y queque.
   Los panes se venden por paquete: 5 unidades por S/ 1.00 (pan de agua y pan torta) y
-  4 unidades por S/ 1.00 (pan de yema, integral, bizcochos, cachito con manjar y relleno).
+  4 unidades por S/ 1.00 (pan de yema, integral, bizcochos y cachito con manjar).
   Las rosquitas se venden en bolsa de 1/2 kg por S/ 6.00.
 - **`COMBOS`**: promociones. Cada combo define sus productos (`items`) y su precio final;
   el ahorro se calcula solo comparando con la suma de precios normales.
