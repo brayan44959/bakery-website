@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Haz tu Pedido | Panadería y Pastelería William - Cajamarca</title>
   <meta name="description" content="Arma tu lista de panes y dulces artesanales y envíala directamente por WhatsApp para coordinar recojo o delivery en Cajamarca.">
+  <meta name="theme-color" content="#381e13">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Panadería y Pastelería William">
+  <meta property="og:title" content="Haz tu Pedido | Panadería y Pastelería William - Cajamarca">
+  <meta property="og:description" content="Arma tu lista de panes y dulces artesanales y envíala directamente por WhatsApp para coordinar recojo o delivery en Cajamarca.">
+  <meta property="og:url" content="https://brayan44959.github.io/bakery-website/pages/pedidos.html">
+  <meta property="og:image" content="https://brayan44959.github.io/bakery-website/img/hero.jpg">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="../img/logo.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,11 +25,11 @@
   <aside class="top-bar" aria-label="Aviso y contacto">
     <div class="top-bar-left">
       <span class="top-badge">Horno en marcha</span>
-      <span>🥖 Pan caliente: <b class="hot-bread-am">6:30 AM</b> y <b class="hot-bread-pm">4:45 PM</b></span>
+      <span>🥖 Pan caliente: <b class="hot-bread-am">4:30 AM</b> y <b class="hot-bread-pm">4:00 PM</b></span>
       <span>📍 <span class="address-display">Jr. Chanchamayo 1874, Urb. El Amauta, Cajamarca</span></span>
     </div>
     <div class="top-bar-right">
-      <span>Pedidos al WhatsApp: <b class="phone-display">+51 976 123 456</b></span>
+      <span>Pedidos al WhatsApp: <b class="phone-display">+51 987 612 172</b></span>
     </div>
   </aside>
 
@@ -77,7 +85,7 @@
     <div class="drawer-info">
       <b>Panadería y Pastelería William</b>
       <p>Jr. Chanchamayo 1874, Urb. El Amauta, Cajamarca</p>
-      <p style="margin-top:6px">WhatsApp: <b class="phone-display">+51 976 123 456</b></p>
+      <p style="margin-top:6px">WhatsApp: <b class="phone-display">+51 987 612 172</b></p>
     </div>
   </aside>
 
@@ -93,19 +101,21 @@
 
     <section class="section">
       <div class="order-workspace">
-        
+
         <!-- Columna Izquierda: Formulario de Datos y Añadido Rápido -->
         <div class="order-card" id="order-form">
           <h3>1. Datos de Entrega y Cliente</h3>
-          
+
+          <div class="form-error-box" id="order-form-errors" role="alert" aria-live="polite"></div>
+
           <div class="form-group">
             <label for="order-name">Tu Nombre y Apellido (opcional)</label>
-            <input type="text" id="order-name" placeholder="Ej. Juan Pérez" autocomplete="name">
+            <input type="text" id="order-name" placeholder="Ej. Juan Pérez" autocomplete="name" maxlength="60">
           </div>
 
           <div class="form-group">
-            <label for="order-phone">Teléfono de contacto</label>
-            <input type="tel" id="order-phone" placeholder="Ej. 976 123 456" autocomplete="tel">
+            <label for="order-phone">Teléfono de contacto (obligatorio)</label>
+            <input type="tel" id="order-phone" placeholder="Ej. 987 654 321" autocomplete="tel" maxlength="20">
           </div>
 
           <div class="form-group">
@@ -124,25 +134,25 @@
 
           <div class="form-group" id="delivery-address-group" style="display:none;">
             <label for="order-address">Dirección exacta en Cajamarca (calle, número y referencia)</label>
-            <input type="text" id="order-address" placeholder="Ej. Jr. Amalia Puga 450, frente al parque">
+            <input type="text" id="order-address" placeholder="Ej. Jr. Amalia Puga 450, frente al parque" maxlength="150">
           </div>
 
           <div class="form-group">
             <label for="order-time">Fecha y hora preferida</label>
-            <input type="text" id="order-time" placeholder="Ej. Hoy para el pan caliente de las 4:45 PM o Mañana 7:00 AM">
+            <input type="text" id="order-time" placeholder="Ej. Hoy a las 8:00 AM o mañana a las 5:00 PM" maxlength="100">
           </div>
 
           <div class="form-group">
             <label for="order-notes">Observaciones adicionales</label>
-            <textarea id="order-notes" rows="2" placeholder="Detalles de sabor de tortas, rebanado de pan, dedicatoria, etc."></textarea>
+            <textarea id="order-notes" rows="2" placeholder="Detalles de sabor de tortas, rebanado de pan, dedicatoria, etc." maxlength="300"></textarea>
           </div>
 
           <hr style="border:none; border-top:1px dashed var(--border); margin:28px 0 20px;">
 
-          <h3>Añadir más productos a la lista</h3>
+          <h3>Añadir productos o combos a la lista</h3>
           <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:flex-end;">
             <div style="flex:2; min-width:180px;">
-              <label for="quick-prod-select" style="font-size:0.85rem; font-weight:700; color:var(--cacao); display:block; margin-bottom:4px;">Seleccionar Producto</label>
+              <label for="quick-prod-select" style="font-size:0.85rem; font-weight:700; color:var(--cacao); display:block; margin-bottom:4px;">Seleccionar producto o combo</label>
               <select id="quick-prod-select" style="width:100%; padding:10px; border:1.5px solid var(--border); border-radius:8px; background:#fff;"></select>
             </div>
             <div style="width:75px;">
@@ -151,7 +161,7 @@
             </div>
             <button type="button" class="btn small" id="btn-quick-add" style="margin-bottom:2px;">+ Añadir</button>
           </div>
-          <p style="font-size:0.82rem; color:var(--ink-muted); margin-top:10px;">También puedes explorar con fotos en la página de <a href="productos.html" style="color:var(--oro); font-weight:700; text-decoration:underline;">Productos y Precios</a>.</p>
+          <p style="font-size:0.82rem; color:var(--ink-muted); margin-top:10px;">Los panes se agregan por paquete (4 o 5 unidades). También puedes explorar con fotos en la página de <a href="productos.html" style="color:var(--oro); font-weight:700; text-decoration:underline;">Productos y Precios</a>.</p>
         </div>
 
         <!-- Columna Derecha: Lista Interactiva y Ticket de WhatsApp -->
@@ -178,7 +188,7 @@
                 <span style="font-size:0.82rem; color:var(--ink-muted);">Se enviará este formato a la panadería</span>
               </div>
               <pre class="ticket-preview" id="order-wa-preview"></pre>
-              
+
               <div class="order-actions">
                 <button type="button" class="btn wa" id="btn-send-wa" style="width:100%; font-size:1.05rem;">
                   <span>📲 Enviar Pedido por WhatsApp</span>
@@ -251,11 +261,11 @@
       </div>
       <div class="footer-col">
         <h4>Horarios y Contacto</h4>
-        <p><b>Lunes a Sábado:</b><br>6:00 AM - 9:30 PM</p>
-        <p style="margin-top:8px"><b>Domingos:</b><br>6:30 AM - 9:00 PM</p>
-        <p style="margin-top:12px"><b>WhatsApp:</b><br><span class="phone-display">+51 976 123 456</span></p>
+        <p><b>Turno mañana:</b><br><span class="hours-morning">4:30 AM - 10:00 AM</span></p>
+        <p style="margin-top:8px"><b>Turno tarde:</b><br><span class="hours-afternoon">4:00 PM - 9:00 PM</span></p>
+        <p style="margin-top:12px"><b>WhatsApp:</b><br><span class="phone-display">+51 987 612 172</span></p>
         <div style="margin-top:16px;">
-          <a href="pedidos.html" class="btn small wa">Pedir por WhatsApp</a>
+          <a href="pedidos.html" class="btn small wa wa-link" data-msg="Hola Panadería William, quisiera hacer un pedido.">Pedir por WhatsApp</a>
         </div>
       </div>
     </div>
